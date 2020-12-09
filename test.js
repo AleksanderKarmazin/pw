@@ -8,7 +8,7 @@ const playwright = require('playwright');
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto('https://trunk.businesschain.io/');
-    await page.screenshot({ path: `example-${browserType}.png` });
+    await page.screenshot({ path: `src/example-${browserType}.png` });
     await browser.close();
     console.log('Sucsess ' + browserType);
   }

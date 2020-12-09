@@ -16,4 +16,10 @@ jobs:
         
       - name: Install dependencies and run tests
         run: npm install 
+      - name: Install dependencies and run tests
         run: node test.js
+      - uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test-artifacts
+          path: path/to/artifacts
